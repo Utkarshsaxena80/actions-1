@@ -13,16 +13,11 @@ jobs:
       - name: Install Cowsay Program 
         run: sudo apt-get install cowsay -y 
 
-      - name : Execute Cowsay CMD
-        run: cowsay -f dragon "Run for cover, I am a DRAGON">> dragon.txt
-  
-      - name : Test file exists
-        run : grep -i "dragon" dragon.txt
-
-      - name: Read File
-        run : cat dragon.txt  
-      
       - name : List  Repo files
         run : ls  -ltra
+
+      - name : Executing shell script
+        run : ./ascii-script.sh
+
       
 
