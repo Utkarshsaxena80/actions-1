@@ -16,8 +16,8 @@ jobs:
          ls -ltra
          cat README
         
-      - name: Genarate ASCII artwork 
-        run: cowsat -f dragon "Run for cover, I am a DRAGON">> dragon.txt
+      # - name: Genarate ASCII artwork 
+      #   run: cowsat -f dragon "Run for cover, I am a DRAGON">> dragon.txt
 
 
       # - name: List Files
