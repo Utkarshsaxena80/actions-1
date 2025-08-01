@@ -1,7 +1,6 @@
 name: Generate ASCII Artwork
 
 on: push
-  
 
 jobs:
   ascii_job:
@@ -10,16 +9,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Cowsay Program 
-        run: sudo apt-get install cowsay -y 
+      - name: Install Cowsay Program
+        run: |
+          sudo apt-get update
+          sudo apt-get install cowsay -y
 
-      - name : List  Repo files
-        run : ls  -ltra
+      - name: List Repo files
+        run: ls -ltra
 
-      - name : Executing shell script
-        run : | 
-          chmod +x ascii-script.sh
+      - name: Executing shell script
+        run: |
+          chmod +x ./ascii-script.sh
           ./ascii-script.sh
-
-      
-
